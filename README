@@ -1,0 +1,24 @@
+# IMLEEDS Framework.
+
+# This framework has been constructed as a test to show representatives at BOOHOO
+# my (Richard Dickinson) abilites using PHP7. This has been done because over the
+# years, I've not had chance to work with frameworks like Laravel, Zend or others
+# as my work has been fully bespoke, built from the ground up.
+
+# This framework has also been built from the ground up, but having looked at
+# Laravel lightly, I saw some major advantages from what they do, you are required
+# to list all of your accepted url calls in a route file, I thought this was
+# pointless, because we always want some form of output, but after a little bit
+# of playing around, I found it easier to 'find' where some content is being
+# handled.
+
+# Further to this, I also saw separate route files, such as a web, api and console,
+# this let me to seeing such a huge availability of splitting off calls based on
+# the request type.
+
+# So this framework has a 'hello-world' test for each type and can be validated
+# using:
+#
+#	1: http: Load the url in the browser '/hello-world'
+#	2: api:	Load the url in the browser '/api/hello-world'
+#	3: cli:	'php /path/to/artisan hello-world'

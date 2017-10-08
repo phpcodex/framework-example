@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php 
+
+	//Move our directory to the public folder.
+	chdir(__DIR__ . "/public");
+
+	//Run the resource as though we are anything else.
+	include("index.php");
