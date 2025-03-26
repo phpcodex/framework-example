@@ -25,10 +25,10 @@
 			array_pop($nsClass);
 
 			//Now we have our folder.
-			$checkFolders = [
+			$checkFolders = array(
 				LIB . DS . CLASSES . DS . implode("/", $nsClass),
 				LIB . DS . INTERFACES . DS . implode("/", $nsClass)
-			];
+			);
 
 		}
 

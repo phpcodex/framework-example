@@ -8,9 +8,9 @@
 		public $name = null;
 		public $token = "url";
 		public $defaultValue = true;
-		public $data = [];
+		public $data = array();
 
-		private $arguments = [];
+		private $arguments = array();
 
 		//Our single instance.
 		private static $instance = null;

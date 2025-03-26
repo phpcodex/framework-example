@@ -17,7 +17,7 @@
 
 		//Declare our variables.
 		public $version = 1.0;
-		public $status = [];
+		public $status = array();
 
 		//Our entry point in to the system.
 		public function __construct(){
