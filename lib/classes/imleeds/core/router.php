@@ -43,7 +43,7 @@
                         $this->protocol             = (isset($_SERVER["HTTPS"])) 	? "HTTPS" : "HTTP";
                         $this->document             = $_SERVER["DOCUMENT_ROOT"];
                         $this->domain               = $_SERVER["SERVER_NAME"];
-                        if (isset($_SERVER["argv"])) $this->query = $_SERVER["argv"][0];
+                        if (isset($_SERVER["argv"][0])) $this->query = $_SERVER["argv"][0];
 				        $this->request_method       = $_SERVER["REQUEST_METHOD"];
 				$this->route_type	= "web";
 
