@@ -22,3 +22,8 @@
 #	1: http: Load the url in the browser '/hello-world'
 #	2: api:	Load the url in the browser '/api/hello-world'
 #	3: cli:	'php /path/to/artisan hello-world'
+
+work and tested on
+PHP 7.4.33
+PHP 8.1.31
+** PHP 8.4.8

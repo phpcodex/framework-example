@@ -12,6 +12,12 @@
 
 		private $arguments = array();
 
+        public $protocol = null;
+        public $request_method = null;
+        public $route_type = null;
+        public $query = null;
+        public $request = null;
+
 		//Our single instance.
 		private static $instance = null;
 		public static function getInstance(){ if (is_null(static::$instance)) static::$instance = new static(); return static::$instance; }

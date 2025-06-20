@@ -19,6 +19,11 @@
 		public $version = 1.0;
 		public $status = array();
 
+        //must set these so they're able to change later. //dynamic property violation otherwise.
+        public $router = null;
+        public $controller = null;
+        public $mysql = null;
+
 		//Our entry point in to the system.
 		public function __construct(){
 

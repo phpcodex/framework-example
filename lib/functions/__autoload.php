@@ -1,7 +1,7 @@
 <?php
 
 	//IMLeeds Framework autoloader.
-	function __autoload($class_name){
+	function my_autoloader($class_name){
 
 		//We're looking for this class, let's remove the information we don’t need.
 		$class_name = strtolower($class_name);
@@ -46,4 +46,7 @@
 		} //end foreach
 		
 	} //end function __autoload();
+
+spl_autoload_register('my_autoloader');
+
 
