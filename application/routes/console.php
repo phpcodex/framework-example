@@ -13,7 +13,7 @@
 	 *
          * This simply put is just a way for you to isolate that calls are coming in from a
          * console request. While your URL will start /console, you should not include this on your
-         * route methods. Treat the url as through /console is root.
+         * route methods. Treat the url as though /console is root.
          *
          */
 

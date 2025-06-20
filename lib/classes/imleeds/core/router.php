@@ -18,6 +18,10 @@
         public $query = null;
         public $request = null;
 
+        public $document = null;
+        public $domain = null;
+
+
 		//Our single instance.
 		private static $instance = null;
 		public static function getInstance(){ if (is_null(static::$instance)) static::$instance = new static(); return static::$instance; }
@@ -35,18 +39,18 @@
 
 			} else {
 
-	                        //We need to identify if we're using SSL or not.
-	                        $this->protocol         = (isset($_SERVER["HTTPS"])) 	? "HTTPS" : "HTTP";
-	                        $this->document         = $_SERVER["DOCUMENT_ROOT"];
-	                        $this->domain           = $_SERVER["SERVER_NAME"];
-	                        $this->query            = $_SERVER["argv"][0];
-				$this->request_method   = $_SERVER["REQUEST_METHOD"];
+                        //We need to identify if we're using SSL or not.
+                        $this->protocol             = (isset($_SERVER["HTTPS"])) 	? "HTTPS" : "HTTP";
+                        $this->document             = $_SERVER["DOCUMENT_ROOT"];
+                        $this->domain               = $_SERVER["SERVER_NAME"];
+                        if (isset($_SERVER["argv"])) $this->query = $_SERVER["argv"][0];
+				        $this->request_method       = $_SERVER["REQUEST_METHOD"];
 				$this->route_type	= "web";
 
 			} //end if
 
                         //Process our url request.
-			parse_str($this->query, $this->data);
+			if (!is_null($this->query)) parse_str($this->query, $this->data);
 
                         //Begin to validate our query.
                         if (isset($this->data[$this->token])) $this->validateQuery();

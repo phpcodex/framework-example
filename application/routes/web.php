@@ -16,7 +16,7 @@
 	});
 
 	router::get("/welcome/{location}", function($location = 'Unknown'){
-		router::controller("welcome", $location);
+		 router::controller("welcome", $location);
 	});
 
 	//Old route, shiney new code replaces this.
