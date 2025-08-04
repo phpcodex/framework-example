@@ -2,6 +2,8 @@
 
 	namespace imleeds\core;
 
+    use imleeds\core\exceptions\BasicAuthFailedException;
+
 	class router implements irouter {
 
 		public $version = 1.0;
@@ -126,6 +128,17 @@
 		}
 
 		public function get($uri, $callback){
+
+            if (isset($_SERVER['REDIRECT_HTTP_AUTHORIZATION'])) {
+                //die ('requesting auth not supported yet');
+                $user = $_SERVER['PHP_AUTH_USER'];
+                $pass = $_SERVER['PHP_AUTH_PW'];
+                if (isset(BASIC_AUTH[$user])){
+                    if (BASIC_AUTH[$user] !== $pass) {
+                        throw new BasicAuthFailedException($user);
+                    }
+                }
+            }
 
 			//Ensure we process our uri.
 			$this->validateURI($uri);
