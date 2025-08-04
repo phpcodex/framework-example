@@ -3,6 +3,8 @@
 	//Ensure we are using our route.
 	use imleeds\core\router;
 
+    $auth = ['admin' => 'admin', 'richard' => 'bob'];
+
 	//Load our route.
 	router::get("/demo/{name}/{age}", function($name = 'Guest', $age = '0'){
 
@@ -13,7 +15,7 @@
 
 		} //end if
 
-	});
+	}, $auth);
 
 	router::get("/welcome/{location}", function($location = 'Unknown'){
 		 router::controller("welcome", $location);

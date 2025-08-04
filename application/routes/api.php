@@ -19,4 +19,9 @@
 	router::redirect("/", "/welcome");
 
 	//Our basic hello-world.
-	router::get("/hello-world", function(){ echo "Hello API World!"; });
+	router::get("/hello-world", function()
+    {
+        echo '<pre>';
+        print_r($_SERVER);
+        //echo "Hello API World!";
+    });

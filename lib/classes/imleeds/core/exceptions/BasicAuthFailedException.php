@@ -3,10 +3,9 @@
 namespace imleeds\core\exceptions;
 
 use imleeds\core\traits\ExceptionTrait;
-use \Throwable;
 use \Exception;
 
-class BasicAuthFailedException {
+class BasicAuthFailedException extends Exception {
     use ExceptionTrait;
 }
 
