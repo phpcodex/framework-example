@@ -1,6 +1,10 @@
 <?php
 
-	//Our config file.
+    //autoloader
+    require_once ('../vendor/autoload.php');
+
+
+//Our config file.
 	include_once("config.php");
 
 	//Load up the function to list files in folders.

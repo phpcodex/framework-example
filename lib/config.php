@@ -83,6 +83,6 @@
 	define('CONTROLLERS',	'controllers');
 	define('ROUTES',	'routes');
 	define('VIEWS',		'views');
-    define('BASIC_AUTH',		['admin' => 'admin123']);
+    define('BASIC_AUTH',		['admin' => 'admin1234']);
 
 

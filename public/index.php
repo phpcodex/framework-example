@@ -1,9 +1,6 @@
 <?php
 
-    error_reporting(0);
-
-    //autoloader
-    require_once ('../vendor/autoload.php');
+    //error_reporting(0);
 
 	# We must begin to load our application from the beginning.
 	require_once("../lib/bootstrap.php");
