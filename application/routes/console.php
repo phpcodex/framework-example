@@ -23,7 +23,7 @@
 	//Our helper class.
 	router::cli("/", function(){ router::controller("console", "help"); });
 
-	//Our basic hello-world.
+//Our basic hello-world.
 	router::cli("/hello-world", function(){ echo "Hello Console World!"; });
 
 	//We should allow our console to run any controller and method.

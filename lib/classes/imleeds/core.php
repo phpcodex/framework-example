@@ -16,7 +16,7 @@
                 public static function getInstance(){ if (is_null(static::$instance)) static::$instance = new static(); return static::$instance; }
 
 		//Declare our variables.
-		public $version = 1.0;
+		public $version = 12.0;
 		public $status = array();
 
         //must set these so they're able to change later. //dynamic property violation otherwise.
@@ -41,5 +41,10 @@
 			$this->mysql 		= mysql::getInstance();
 
 		} //end function run();
+
+        public function getVersion()
+        {
+            return $this->version;
+        }
 
 	} //end class core.

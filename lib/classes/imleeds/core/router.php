@@ -152,7 +152,7 @@
                 public function cli($uri, $callback){
 
                         //Ensure we process our uri.
-			$this->validateURI($uri);
+			            $this->validateURI($uri);
 
                         //Validate our request and process the callback.
                         if ($this->request_method == "CLI" && "/".$this->request == $uri)
